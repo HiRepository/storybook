@@ -1,13 +1,13 @@
 {
   "name": "storybook-ex",
   "version": "1.0.0",
-  "description": "",
   "main": "iyndex.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=6b124039ecc9"
   },
   "keywords": [],
   "author": "",
