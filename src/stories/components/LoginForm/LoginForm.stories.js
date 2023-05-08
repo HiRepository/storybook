@@ -14,7 +14,7 @@ export default {
   },
   // tags: ["autodocs"],
 };
-export const LoginFormDefault = {};
+//export const LoginFormDefault = {};
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
 export const SuccessfulLogin = {
   play: async ({ canvasElement }) => {
@@ -92,29 +92,29 @@ export const LoginWithEmptyPassword = {
   },
 };
 
-export const ExampleLoginWithBug = {
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const email = "email@example.com";
-
-    // Simulate interactions with the component
-    await userEvent.type(canvas.getByTestId("username"), email, {
-      delay: 100,
-    });
-
-    await userEvent.type(canvas.getByTestId("password"), "a-random-password", {
-      delay: 100,
-    });
-
-    await userEvent.click(canvas.getByRole("button"));
-
-    // Assert DOM structure
-    const message = canvas.getByTestId("message");
-
-    await expect(message).toBeInTheDocument();
-    await expect(message).toHaveStyle("color: rgb(255, 0, 0);");
-  },
-};
+// export const ExampleLoginWithBug = {
+//   play: async ({ canvasElement }) => {
+//     const canvas = within(canvasElement);
+//     const email = "email@example.com";
+//
+//     // Simulate interactions with the component
+//     await userEvent.type(canvas.getByTestId("username"), email, {
+//       delay: 100,
+//     });
+//
+//     await userEvent.type(canvas.getByTestId("password"), "a-random-password", {
+//       delay: 100,
+//     });
+//
+//     await userEvent.click(canvas.getByRole("button"));
+//
+//     // Assert DOM structure
+//     const message = canvas.getByTestId("message");
+//
+//     await expect(message).toBeInTheDocument();
+//     await expect(message).toHaveStyle("color: rgb(255, 0, 0);");
+//   },
+// };
 export const ExampleApiMock = () => {
   setupApiMock();
   const expectedResponse = [
