@@ -2,7 +2,7 @@
 
 # Other configuration required
 
-on: pull_request
+on: push
 
 jobs:
   chromatic-deployment:
