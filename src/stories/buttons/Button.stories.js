@@ -8,12 +8,6 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
   },
-  ally: {
-    element: "button",
-    config: {},
-    options: {},
-    manual: true,
-  },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
@@ -41,5 +35,20 @@ export const Small = {
   args: {
     size: "small",
     label: "Button",
+  },
+};
+
+export const Accessible = {
+  args: {
+    primary: false,
+    label: 'Button',
+  },
+};
+
+// This is not
+export const Inaccessible = {
+  args: {
+    ...Accessible.args,
+    backgroundColor: 'red',
   },
 };
